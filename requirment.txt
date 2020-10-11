@@ -9,3 +9,4 @@ flask-wtf==0.14.3
 email_validator==1.1.1
 dnspython>=1.15.0
 idna>=2.0.0
+SQLAlchemy>=0.8.0
