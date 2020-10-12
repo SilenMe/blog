@@ -6,3 +6,21 @@ used flask-wtf for form validation. At first the name sound the funny but it's r
 
 used wtForms for form validation. wtforms removed email-validation you you have saperetely install/import 'pip install email_validator'
 
+used sqlalchemy ORM(object relational mapper) because it work fine with all databases.
+
+tree /f
+
+
+
+
+
+### initial database setup on devlopment machine using sqlite
+from flaskblog import db
+db.create_all()
+from flaskblog import User, Post 
+user_1=User(username='silenme',email='silen@silenme.com',password='pwd')
+db.session.add(user_1)
+db.session.commit()
+
+
+
