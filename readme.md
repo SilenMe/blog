@@ -17,10 +17,10 @@ tree /f
 ### initial database setup on devlopment machine using sqlite
 from flaskblog import db
 db.create_all()
-from flaskblog import User, Post 
+from flaskblog import User, Post (after migration from flaskblog.models import User, Post)
 user_1=User(username='silenme',email='silen@silenme.com',password='pwd')
 db.session.add(user_1)
 db.session.commit()
 
-
+used flask-login for login and authentication
 
