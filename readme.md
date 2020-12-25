@@ -25,3 +25,6 @@ db.session.commit()
 used flask-login for login and authentication
 
 used Image class of Pillow(PIL) module so that image(profile pic) get rezised before uploading (pip/pip3 install Pillow) version 7.0.0 which I have used
+
+
+dont forget to paginate because it will help in speed and reliebility
