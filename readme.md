@@ -28,3 +28,6 @@ used Image class of Pillow(PIL) module so that image(profile pic) get rezised be
 
 
 dont forget to paginate because it will help in speed and reliebility
+
+used flask-mail for email verification and password (pip/pip3 install flask-mail)
+dont forget to on the 'less secure app' feature for the email account

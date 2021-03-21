@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+	<!-- user registration form -->
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Reset Password</legend><!-- bottom margin of 4 -->
+                <!-- start of email form -->
+                
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    <!-- start of error message -->
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+				<!-- end of error message -->
+				<!-- if no error then return actual form -->
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <!-- end of email form -->
+                
+                
+                
+
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+            
+        </form>
+    </div>
+    <!--end of user registration form -->
+{% endblock content %}
+
+
