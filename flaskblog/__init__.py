@@ -1,9 +1,23 @@
-from flask import Flask
+from flask import Flask,render_template,url_for,request
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_mail import Mail
 from flaskblog.config import Config
+
+
+import pandas as pd 
+import pickle
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+import joblib
+import pickle
+
+
+filename = 'nlp_model.pkl'
+clf = pickle.load(open(filename, 'rb'))
+cv=pickle.load(open('tranform.pkl','rb'))
+
 
 
 db = SQLAlchemy()
